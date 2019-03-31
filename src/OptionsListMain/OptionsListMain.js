@@ -8,12 +8,7 @@ class Features extends React.Component {
       
 
         return (
-            <div className="feature" key="Processor">
-              <div className="feature__name">Processor</div>
-              <ul className="feature__list">
-                {options} 
-              </ul>
-            </div>
+          {options}
         )
     }
 }
@@ -35,10 +30,10 @@ export default Features;
     //           </li>
     //         });
 
-    //         return <div className="feature" key={key}>
-    //           <div className="feature__name">{key}</div>
-    //           <ul className="feature__list">
-    //             { options }
-    //           </ul>
-    //         </div>
-    //       });
+    //   return <div className="feature" key={key}>
+    //     <div className="feature__name">{key}</div>
+    //     <ul className="feature__list">
+    //       { options }
+    //     </ul>
+    //   </div>
+    // });
