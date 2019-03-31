@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Features from './Features/Features';
+import Options from './Options/Options';
 import Summary from './Summary/Summary';
 import DisplayTotal from './DisplayTotal/DisplayTotal'
 
@@ -86,7 +86,7 @@ class App extends Component {
         <main>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-            <Features />
+            <Options />
           </section>
           <section className="main__summary">
             <h3>NEW GREENLEAF 2018</h3>
