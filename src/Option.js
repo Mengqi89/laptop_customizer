@@ -3,6 +3,7 @@ import React from 'react';
 class Option extends React.Component {
     render() {
         console.log(this.props)
+        // const key = this.props.key
         const options = this.props.features[key].map((item, index) => {
             const selectedClass = item.name === this.state.selected[key].name ? 'feature__selected' : '';
             const featureClass = 'feature__option ' + selectedClass;
@@ -19,6 +20,7 @@ class Option extends React.Component {
         return options
     }
 }
+
 
 export default Option
 

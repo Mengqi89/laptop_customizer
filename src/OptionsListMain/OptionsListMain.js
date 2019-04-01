@@ -11,7 +11,9 @@ class OptionsListMain extends React.Component {
             return <div className="feature" key={key}>
                 <div className="feature__name">{key}</div>
                 <ul className="feature__list">
-                    <Option props={this.props.props.features}/>
+                    <Option 
+                    // key={key}
+                    features={this.props.props.features}/>
                 </ul>
             </div>
           })

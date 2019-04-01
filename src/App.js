@@ -87,7 +87,10 @@ class App extends Component {
         <main>
           <section className="main__form">
             <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-            <OptionsListMain props={this.props}/>
+            <OptionsListMain 
+            selected={this.state.selected}
+            
+            props={this.props}/>
           </section>
           <section className="main__summary">
             <h3>NEW GREENLEAF 2018</h3>
