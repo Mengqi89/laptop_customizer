@@ -3,6 +3,7 @@ import './App.css';
 import Specs from './Specs/Specs'
 import Summary from './Summary/Summary';
 import DisplayTotal from './DisplayTotal/DisplayTotal'
+import Header from './Header/Header'
 
 class App extends Component {
   constructor(props){
@@ -41,24 +42,13 @@ class App extends Component {
       
     return (
       <div className="App">
-        <header>
-          <h1>ELF Computing</h1>
-          <h3>Laptops</h3>
-          <h5>Customize your laptop</h5>  
-        </header>      
+        <Header />
         <main>
-          <section className="main__form">
-            <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
             <Specs
             selected={this.state.selected}
             props={this.props.features}
             handleUpdate={this.updateFeature}/>
-          </section>
-          <section className="main__summary">
-            <h3>NEW GREENLEAF 2018</h3>
             <Summary selected={this.state.selected} />
-            <DisplayTotal selected={this.state.selected}/>
-          </section>
         </main>
       </div>
     );
