@@ -2,12 +2,16 @@ import React from 'react';
 
 class DisplayTotal extends React.Component {
     render() {
+        const total = Object.keys(this.props.selected)
+          .reduce((acc, curr) => acc + this.props.selected[curr].cost, 0);
         return (
             <div className="summary__total">
-              <div className="summary__total__label">Your Price: </div>
-              <div className="summary__total__value">700
-              </div>
-            </div>        
+                <div className="summary__total__label">Your Price: </div>
+                <div className="summary__total__value">
+                { new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'})
+                    .format(total) }
+                </div>
+            </div>      
         )
     }
 }
