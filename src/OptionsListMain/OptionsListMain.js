@@ -1,19 +1,30 @@
 import React from 'react';
+import Option from '../Option'
 
 
 
-class Features extends React.Component {
+class OptionsListMain extends React.Component {
     render() {
-
+        console.log(this.props.props.features)
+        const featuresList = Object.keys(this.props.props.features)
+          .map(key => { 
+            return <div className="feature" key={key}>
+                <div className="feature__name">{key}</div>
+                <ul className="feature__list">
+                    <Option props={this.props.props.features}/>
+                </ul>
+            </div>
+          })
       
 
-        return (
-          {options}
-        )
+        return featuresList
+        
     }
 }
 
-export default Features;
+export default OptionsListMain;
+
+
 
 // const features = Object.keys(this.props.features)
     //       .map(key => {
