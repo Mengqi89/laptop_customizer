@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Specs from './Specs/Specs'
-import Summary from './Summary/Summary';
-import DisplayTotal from './DisplayTotal/DisplayTotal'
+import SummaryList from './SummaryList/SummaryList';
 import Header from './Header/Header'
 
 class App extends Component {
@@ -39,6 +38,7 @@ class App extends Component {
   }
 
   render() {
+
       
     return (
       <div className="App">
@@ -46,9 +46,9 @@ class App extends Component {
         <main>
             <Specs
             selected={this.state.selected}
-            props={this.props.features}
+            features={this.props.features}
             handleUpdate={this.updateFeature}/>
-            <Summary selected={this.state.selected} />
+            <SummaryList selected={this.state.selected} />
         </main>
       </div>
     );

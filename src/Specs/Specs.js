@@ -1,28 +1,17 @@
 import React from 'react';
-import Options from '../Options/Options'
+import FeatureList from '../FeatureList/FeatureList'
 
 class Specs extends React.Component {
 
   render() {
-    const featureList = Object.keys(this.props.props).map(
-      (key) => (
-        <div className="feature" key={key}>
-        <div className="feature__name">{key}</div>
-        <ul className="feature__list">
-        <Options
-          options={this.props.props[key]}
-          handleUpdate={this.props.handleUpdate}
-          keys={key}
-          selected={this.props.selected}
-          />
-        </ul>
-        </div>
-    )
-    )
     return (
     <section className="main__form">
       <h3>TECH SPECS AND CUSTOMIZATIONS</h3>
-        {featureList}
+        <FeatureList 
+        features={this.props.features}
+        selected={this.props.selected}
+        handleUpdate={this.props.handleUpdate}
+        />
     </section>
     );
   }
