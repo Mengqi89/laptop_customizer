@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 class Options extends Component {
   render() {
     const key=this.props.keys
-    console.log(this.props.options[key])
-    console.log(this.props)
-    console.log(this.props.selected[key].name)
-
     const optionList = this.props.options[key].map(
       (item, index) => { 
         const selectedClass = item.name === this.props.selected[key].name ? 'feature__selected' : '';
@@ -23,7 +19,11 @@ class Options extends Component {
       }
     )
 
-    return optionList
+    return (
+      <>
+        {optionList}
+      </>
+    )
     
   }
 }

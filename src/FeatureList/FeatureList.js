@@ -17,7 +17,6 @@ class FeatureList extends Component {
               </ul>
               </div>
           ))
-          console.log(this.props.selected)
         return (
             <>
               {featureList}  
